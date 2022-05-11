@@ -39,6 +39,21 @@ div {
   max-width: 1070px;
 }
 
+input {
+  &[type="text"],
+  &[type="number"],
+  &[type="search"] {
+    height: 40px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-box-shadow: 0 0 17px -15px $black;
+    box-shadow: 0 0 17px -15px $black;
+    border-radius: 10px;
+    border: 1px solid $green;
+  }
+}
+
 .flex {
   width: 100%;
   flex-direction: column;

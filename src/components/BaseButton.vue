@@ -1,7 +1,7 @@
 <template>
   <button
     class="flex flex-d-row jc-center ai-center btn"
-    :class="{ primary: !type, [type]: type }"
+    :class="{ primary: !variant, [variant]: variant }"
     @click="onClick"
     :disabled="disabled"
   >
@@ -18,7 +18,7 @@ import { Options, Vue } from "vue-class-component";
     onClick: { type: Function, required: true },
     text: { type: String, required: true },
     disabled: Boolean,
-    type: String,
+    variant: String,
   },
 })
 export default class BaseButton extends Vue {}
@@ -38,6 +38,7 @@ export default class BaseButton extends Vue {}
   font-weight: bold;
   cursor: pointer;
   text-transform: uppercase;
+  outline: none;
   &[disabled=""] {
     border: 2px solid $disabled;
     background-color: $disabled;
